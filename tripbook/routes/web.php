@@ -9,10 +9,13 @@
 | by your application. Just tell Laravel the URIs it should respond
 | to using a Closure or controller method. Build something great!
 |
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
+});*/
 
-    /* test pour GIT */
-});
+// Va chercher le fichier CompteController.php et appel de la fonction showCompte
+
+Route::get('/', 'CompteController@showCompte');
+
