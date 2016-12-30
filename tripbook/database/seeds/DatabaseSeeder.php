@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     {
 
          $this->call(CompteTableSeeder::class);
+         $this->call(ParcoursTableSeeder::class);
      }
     
 }
