@@ -4,20 +4,18 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLieuxTable extends Migration
+class CreateLivresPhotoTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
- public function up()
+    public function up()
     {
-            Schema::create('lieux', function (Blueprint $table) {
-            $table->increments('id_lieu');
-            $table->string('nom_lieu', 40);
-            $table->longtext('description_lieu');
+         Schema::create('livresPhoto', function (Blueprint $table) {
+            $table->increments('id_livre');
+            $table->string('nom_livre', 40);
          });
     }
 
@@ -28,6 +26,6 @@ class CreateLieuxTable extends Migration
      */
     public function down()
     {
-        Schema::drop('lieux');
+         Schema::drop('livresPhoto');
     }
 }
