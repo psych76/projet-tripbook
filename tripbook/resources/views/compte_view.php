@@ -1,4 +1,17 @@
-<h1> Name comparison </h1>
-<p> This is the name comparison page</p>
+<!DOCTYPE html>
+<html>
 
-<h1>Comparaison de <?php echo nom1?> </h1>
+ 
+    <h1>Task List</h1>
+   
+    <hr>
+ 
+   
+ 	
+   @foreach($compte as $key => $value)
+        
+          <p> {{ $value->id_compte }}</p>
+            <p>{{ $value->nom }}</p>
+       
+    @endforeach
+</html>

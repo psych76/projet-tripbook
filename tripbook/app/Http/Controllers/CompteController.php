@@ -4,9 +4,16 @@
 	use Illuminate\Support\Facades\DB;
 	use App\Http\Controllers\Controller;
 	class CompteController{
-	public function showCompte(){
-		$nom1 = DB::select('SELECT `pseudo` FROM `comptes` WHERE `id_compte` = 1');
-		//$nom2 = DB::select('SELECT `pseudo` FROM `comptes` WHERE `id_compte` = 2 ');
-			  return View::make('compte_view', array('nom1' => $nom1));
-		}
+	
+
+		 public function show($id)
+
+    {
+
+        $comptes = $this->compteRepository->getById($id);
+
+
+        return view('compte_view',  compact('comptes'));
+
+    }
 }

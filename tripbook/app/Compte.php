@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Compte extends Eloquent
 {
      protected $table = 'comptes';
-
+/*
+Ici on récup les données 
+*/
     
 
     public $timestamps = false;
