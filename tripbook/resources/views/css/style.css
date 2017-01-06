@@ -1,8 +1,21 @@
-footer
+.header_composants
 {
+	
 	background-color: #318CE7;
 	font-family: "Lucida Grande", "Lucida sans unicode";
 	color: white;
+	position: fixed; left: 0; right: 0; top: 0;
+	height: 10%;
+	width: 100%;
+
+}
+
+footer
+{
+	background-color: #318CE7;
+	color: white;
+	font-family: "Lucida Grande", "Lucida sans unicode";
+	
 	width: 100%;
 	height: 10%;
 	display: flex;
@@ -10,29 +23,63 @@ footer
 
 }
 
-header
+article
 {
+	position: fixed; top: 10%; left: 0; right: 0; bottom: 0;
+}
+
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul {
+		display: block;
+	}
+
+nav ul {
 	background-color: #318CE7;
-	font-family: "Lucida Grande", "Lucida sans unicode";
 	color: white;
-	position: fixed; left: 0; right: 0; top: 0;
-	height: 10%;
-	width: 100%;
+	list-style: none;
+	position: relative;
+	display: inline-table;
 }
+	nav ul:after {
+		content: ""; clear: both; display: block;
 
-body article 
-{
-    position: absolute;
-    top: 10%;
-    width:100%;
-    height:90%;
-    position: fixed; left: 0; right: 0;
-    
-   
+	}
+
+
+nav ul li {
+	float: left;
 }
+	nav ul li:hover {
+		
+	}
+		
+			nav ul li li:hover a {
+			color: #fff;
+		}
+	
 
-.boutonfooter
-{
-	width: 33%;
+	nav ul li a {
+		display: block; padding: 25px 40px;
+		color: white;
+	}
 
+nav ul ul {
+	background: #5f6975; border-radius: 0px; padding: 0;
+	position: absolute; top: 100%;
 }
+	nav ul ul li {
+		float: none; 
+		border-top: 1px solid #6b727c;
+		border-bottom: 1px solid #575f6a;
+		position: relative;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover {
+				background: #4b545f;
+			}

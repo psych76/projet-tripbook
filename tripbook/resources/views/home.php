@@ -1,55 +1,33 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-        <title>TripBook</title>
-        <meta charset="utf-8">
-        <meta name="description" content="165c. uniques">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-
+<meta charset="UTF-8" />
+		<meta name="description" content="165c. uniques">
+        <link rel="stylesheet" type="text/css" href="style2.css">
         <script type="text/javascript" src="jquery-3.1.1.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){  
-            $("a").click(function(){   
-            page=($(this).attr("href")); 
-            $.ajax({ 
-            url: page, 
-            cache: false, 
-            success:function(html){
-            afficher(html);     
-            },
-            error:function(XMLHttpRequest, textStatus, errorThrows){ 
-            }
-            });
-            return false; 
-            });
-            });function afficher(donnees){ 
-            $("#contenu").empty(); 
-            $("#contenu").append(donnees); 
-            }
-        </script>
+		<title>TripBook</title>
 </head>
-
 <body>
+  	<ul id="top">
+	  <li><a href="#home">Home</a></li>
+	  <li style="float:right"><a href="#about">Déconnexion</a></li>
+	  <li style="float:right"><a href="#contact">A propos</a></li>
+	  <li style="float:right"><a href="#news">Paramètres</a></li>  
+	  <li style="float:right"><a class="active" a href="#news">Profil</a></li>
+	</ul>
 
-    <section>
-        <header>
-            TripBook
-        </header>
-        <article>
-            <div id="contenu">
-                AFFICHAGE DE LA MAP
-            </div>
-        </article>
-        <footer>
-      
-            <div class="boutonfooter"><a href="galerie.php"><img src="images/galerie.png" width="90" height="100%" alt="galerie" /></a></div>
-        
-            <div class="boutonfooter"><a href="home.php"><img src="images/map.png" width="90" height="100%" alt="carte" /></a></div>
-        
-            <div class="boutonfooter"><a href="livre.php"><img src="images/livre.png" width="90" height="100%" alt="livre" /></a></div>   
-        
-        </footer>
-    </section>
+  <main>
+    TEST CONTENU
+  </main>
+
+  <footer>
+  			<ul id="bottom">
+	  			<li id="bottom"><a href="galerie.php"><img src="images/galerie.png" width="90" height="90" alt="galerie" /></a></li>
+	        
+	            <li id="bottom"><a href="home.php"><img src="images/map.png" width="90" height="90" alt="carte" /></a></li>
+	        
+	            <li id="bottom"><a href="livre.php"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
+            </ul>
+  </footer>
 </body>
 </html>
