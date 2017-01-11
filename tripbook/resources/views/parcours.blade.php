@@ -11,32 +11,13 @@
     <body>
         <div class="header">
             <nav class="footer">
-                <!-- Navbar Contents -->
+               <p> Liste des parcours !! </p>
 
-
-                 <!-- Current Tasks -->
-    @if (count($parcours) > 0)
-        <div>
-            <div>
-                Current parcours
-            </div>
-
-            <div>
-                <table>
-
-                    <!-- Table Headings -->
-                    <thead>
-                        <th>parcours</th>
-                        
-                    </thead>
-
-                    <!-- Table Body -->
-                    <tbody>
-                        @foreach ($parcours as $parcour)
+                @foreach ($parcours as $parcour)
                             <tr>
                                 <!-- Task Name -->
                                 <td class="table-text">
-                                    <div>{{ $parcours->id_parcours }}</div>
+                                    <div>{{ $parcour-> nom_parcours }}</div>
                                 </td>
 
                                 <td>
@@ -44,11 +25,7 @@
                                 </td>
                             </tr>
                         @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    @endif
+
             </nav>
         </div>
 

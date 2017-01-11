@@ -1,15 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class ParcoursController extends Controller
 {
-    public function show($id)
+    public function show()
 {
-    $parcours = Parcours::findOrFail($id);
+    /*$parcours = Parcours::findOrFail($id);
  
-    return view('Parcours.show', compact('parcours'));
+    return view('parcours.blade', compact('parcours'));*/
+
+
+    $parcours = DB::table('parcours')->get();
+
+        return view('parcours.blade', ['parcours' => $parcours]);
 }
 }

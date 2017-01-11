@@ -1,5 +1,6 @@
 <?php
-
+use App\Parcours;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,18 +15,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-/*Route::get('/', ['as'=>'home', 'uses'=> 'PagesController@home']);
-
-Route::resource('name-recommender', 'NameComparisonController');*/
-
 /*
-Route::get('/name-comparison', 'NameComparisonController@action_index');
+Création de la vue des parcours ! 
 */
-/*Route::get('/name-comparison', function(){
-	return View::make('name-comparison', array('nom1' => 'Eric', 'nom2' => 'Jimmy'));
-}); */
+Route::get('/parcours', function() {
+	 $parcours = DB::table('parcours')->get();
 
+    return view('parcours', [
+        'parcours' => $parcours
+    ]);
+});
 
-/*  
-http://localhost/name-recommender/public/name-comparison*/
+Route::get('/home', function() {
+	return view('home');
+});
+
+Route::resource('parcour', 'ParcoursController@show');
