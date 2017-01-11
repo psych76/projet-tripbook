@@ -16,4 +16,8 @@
         return view('compte_view',  compact('comptes'));
 
     }
+
+    public function home(){
+    	return view('home');
+    }
 }
