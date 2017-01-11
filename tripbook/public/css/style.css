@@ -1,6 +1,6 @@
 header
 {
-	background-color: #318CE7;
+	background-color: #046380;
 	font-family: "Lucida Grande", "Lucida sans unicode";
 	color: white;
 	position: fixed; left: 0; right: 0; top: 0;
@@ -10,7 +10,7 @@ header
 
 footer
 {
-	background-color: #318CE7;
+	background-color: #046380;
 	color: white;
 	font-family: "Lucida Grande", "Lucida sans unicode";	
 	width: 100%;
@@ -48,7 +48,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #318CE7;
+    background-color: #046380;
     left: 0;
     right: 0;
     width: 100%;
@@ -58,7 +58,15 @@ li
 {
     float: left;
 }
-
+p{
+    font-family: Verdana;
+    
+}
+h1{
+    font-family: Verdana;
+    font-size: 18px;
+    color: #046380;
+}
 li#bottom
 {
 	float: center;

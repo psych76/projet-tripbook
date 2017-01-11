@@ -29,5 +29,8 @@ Route::get('/parcours', function() {
 Route::get('/home', function() {
 	return view('home');
 });
+Route::get('/livre', function() {
+	return view('livre');
+});
 
 Route::resource('parcour', 'ParcoursController@show');

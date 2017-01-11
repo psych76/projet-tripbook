@@ -20,16 +20,16 @@
 	</ul>
 
   <main>
-    TEST CONTENU
+ 
   </main>
 
   <footer>
   			<ul id="bottom">
 	  			<li id="bottom"><a href="parcours"><img src="images/galerie.png" width="90" height="90" alt="galerie" /></a></li>
 	        
-	            <li id="bottom"><a href="home.php"><img src="images/map.png" width="90" height="90" alt="carte" /></a></li>
+	            <li id="bottom"><a href="home"><img src="images/map.png" width="90" height="90" alt="carte" /></a></li>
 	        
-	            <li id="bottom"><a href="livre.php"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
+	            <li id="bottom"><a href="livre"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
             </ul>
   </footer>
 </body>
