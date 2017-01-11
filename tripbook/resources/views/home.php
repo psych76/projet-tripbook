@@ -1,9 +1,12 @@
+
+{{ HTML::style('css/style.css') }}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
 		<meta name="description" content="165c. uniques">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+      
         <script type="text/javascript" src="jquery-3.1.1.js"></script>
 		<title>TripBook</title>
 </head>
