@@ -12,7 +12,6 @@ class Parcours extends Model
     public function recompense() 
 
     {
-
         return $this->belongsTo('App\Recompense');
     }
 }

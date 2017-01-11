@@ -1,12 +1,11 @@
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
         <meta name="description" content="165c. uniques">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-        <script src="{{asset('js/jquery.min.js')}}"></script>
+      
+       <script src="{{asset('js/jquery.min.js')}}"></script>
         <title>TripBook</title>
 </head>
 <body>
@@ -18,15 +17,12 @@
       <li style="float:right"><a class="active" a href="#news">Profil</a></li>
     </ul>
 <main>
-      <h1> Les parcours officiels </h1>
-        @foreach ($parcours as $parcour)
-            <p><a href="{{ URL::action('ParcoursController@showParcours', $parcour->nom_parcours) }}"> {{$parcour-> nom_parcours }}
-
-            
-
-             </a></p> </br> <hr>
-        @endforeach
-
+      
+      @foreach ($parcours_decrit as $parcour)
+       <h1> {{ $parcour -> nom_parcours }} </h1>
+       <p> {{ $parcour -> longueur_parcours }}  kms</p>
+       <p>{{ $parcour -> description_parcours }}</p>
+     @endforeach
 
 </main>
   

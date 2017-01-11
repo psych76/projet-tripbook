@@ -18,19 +18,19 @@ Route::get('/', function () {
 /*
 Création de la vue des parcours ! 
 */
-Route::get('/parcours', function() {
-	 $parcours = DB::table('parcours')->get();
-
-    return view('parcours', [
-        'parcours' => $parcours
-    ]);
-});
+Route::get('/parcours', 'ParcoursController@show');
 
 Route::get('/home', function() {
 	return view('home');
 });
+
+Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
+	
+
+
+
 Route::get('/livre', function() {
 	return view('livre');
 });
 
-Route::resource('parcour', 'ParcoursController@show');
+

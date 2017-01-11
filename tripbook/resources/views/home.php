@@ -6,8 +6,7 @@
 <meta charset="UTF-8" />
 		<meta name="description" content="165c. uniques">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-      
-        <script type="text/javascript" src="jquery-3.1.1.js"></script>
+        <script src="{{asset('js/jquery.min.js')}}"></script>
 		<title>TripBook</title>
 </head>
 <body>
