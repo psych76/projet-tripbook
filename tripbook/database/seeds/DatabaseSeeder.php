@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
          $this->call(ParcoursTableSeeder::class);
          $this->call(LieuTableSeeder::class);
          $this->call(RecompensesParcoursTableSeeder::class);
+         $this->call(UsersTableSeeder::class);
      }
     
 }
