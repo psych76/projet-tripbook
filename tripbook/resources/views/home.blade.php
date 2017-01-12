@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('titre')
-    BAAA
-@stop
 
 
 @section('content')
     @parent
    
-         <h1>Contenu de la page</h1>
+     <figure>
+         <img src="images/carte_nancy.png" alt="carte de nancy" />
+     </figure>    
+         
   
 @stop
 

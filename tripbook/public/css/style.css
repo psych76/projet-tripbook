@@ -83,7 +83,7 @@ a:hover{
 }
 .scroll{
    
-    overflow:auto;
+ overflow-y:scroll; overflow-x:hidden; height:400px;
 } 
 
 .float{

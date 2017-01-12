@@ -12,7 +12,16 @@
 <body>
 <ul id="top">
       <li><a href="#home">Home</a> <p> {{ Auth::user()->name }} </p></li>
-      <li style="float:right"><a href="#about">Déconnexion</a></li>
+
+
+      <li style="float:right">
+        <a href="{{ url('/logout') }}" onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+         Se déconnecter</a>
+        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }} </form>
+      </li>
+      <!--<li style="float:right"><a href="#about">Déconnexion</a></li>-->
       <li style="float:right"><a href="#contact">A propos</a></li>
       <li style="float:right"><a href="#news">Paramètres</a></li>  
       <li style="float:right"><a class="active" a href="#news">Profil</a></li>
@@ -31,7 +40,7 @@
             <ul id="bottom">
                 <li id="bottom"><a href="parcours"><img src="images/galerie.png" width="90" height="90" alt="galerie" /></a></li>
             
-                <li id="bottom"><a href="home"><img src="images/map.png" width="90" height="90" alt="carte" /></a></li>
+                <li id="bottom"><a href="home"><img src="images/carte.png" width="90" height="90" alt="carte" /></a></li>
             
                 <li id="bottom"><a href="livre"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
             </ul>
