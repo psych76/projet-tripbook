@@ -21,12 +21,11 @@
         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }} </form>
       </li>
-      <!--<li style="float:right"><a href="#about">Déconnexion</a></li>-->
       <li style="float:right"><a href="#contact">A propos</a></li>
       <li style="float:right"><a href="#news">Paramètres</a></li>  
       <li style="float:right"><a class="active" a href="#news">Profil</a></li>
     </ul>
-<main>
+<main class="scroll">
   
  <h1>@yield('titre')</h1>
         @section('content')
@@ -38,11 +37,11 @@
   
     <footer>
             <ul id="bottom">
-                <li id="bottom"><a href="parcours"><img src="images/galerie.png" width="90" height="90" alt="galerie" /></a></li>
+                <li id="bottom"><a href="{{ url('/parcours') }}"><img src="images/galerie.png" width="90" height="90" alt="galerie" /></a></li>
             
-                <li id="bottom"><a href="home"><img src="images/carte.png" width="90" height="90" alt="carte" /></a></li>
+                <li id="bottom"><a href="{{ url('/home') }}"><img src="images/carte.png" width="90" height="90" alt="carte" /></a></li>
             
-                <li id="bottom"><a href="livre"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
+                <li id="bottom"><a href="{{ url('/livre') }}"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
             </ul>
   </footer>
 </body>

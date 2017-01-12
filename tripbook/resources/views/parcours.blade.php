@@ -13,7 +13,7 @@
 
 
       <h1> Les parcours officiels </h1>
-      <div class="scroll">
+      <div>
         @foreach ($parcours as $parcour)
             <p><a href="{{ URL::action('ParcoursController@showParcours', $parcour->id_parcours) }}"> {{$parcour-> nom_parcours }}
 

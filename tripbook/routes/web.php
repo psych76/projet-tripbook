@@ -26,6 +26,10 @@ Route::get('/home', function() {
 	return view('home');
 });
 
+Route::get('/livre', function() {
+	return view('livre');
+});
+
 
 Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
 
