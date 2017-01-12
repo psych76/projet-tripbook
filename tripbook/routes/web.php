@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::get('/', function()
 {
-    return View::make('connexion');
+   return view('auth/login');
 });
 /*
 Création de la vue des parcours ! 
@@ -32,8 +32,13 @@ Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
 
 
 
+
 Route::get('/livre', function() {
 	return view('livre');
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

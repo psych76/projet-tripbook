@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class ParcoursController extends Controller
+
+
 {
     public function show()
 {    $parcours = DB::table('parcours')->orderBy('nom_parcours')->get();
@@ -13,11 +15,13 @@ class ParcoursController extends Controller
 
 public function showParcours($id)
 {
+	
 	$parcours_decrit = DB::table('parcours')->where('id_parcours', '=', $id)->get();
 	$lieux = DB::table('contenir')->where('id_parcours', '=', $id)->get();
-	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux]);
+	foreach ($lieux as $lieu) {
+		$lieux_visit = DB::table('lieux')->where('id_lieu', '=', $lieu -> id_lieu)->get();
+
+	}
+	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux_visit]);
 }
-
-
-
 }
