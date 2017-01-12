@@ -20,7 +20,7 @@
 <main>
       <h1> Les parcours officiels </h1>
         @foreach ($parcours as $parcour)
-            <p><a href="{{ URL::action('ParcoursController@showParcours', $parcour->nom_parcours) }}"> {{$parcour-> nom_parcours }}
+            <p><a href="{{ URL::action('ParcoursController@showParcours', $parcour->id_parcours) }}"> {{$parcour-> nom_parcours }}
 
             
 

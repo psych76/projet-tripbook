@@ -13,12 +13,11 @@ class ParcoursController extends Controller
 
 public function showParcours($id)
 {
-	$parcours_decrit = DB::table('parcours')->where('nom_parcours', '=', $id)->get();
-	return view('parcours_description', ['parcours_decrit' => $parcours_decrit]);
-
-
-
- 
-
+	$parcours_decrit = DB::table('parcours')->where('id_parcours', '=', $id)->get();
+	$lieux = DB::table('contenir')->where('id_parcours', '=', $id)->get();
+	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux]);
 }
+
+
+
 }

@@ -12,20 +12,23 @@ use Illuminate\Http\Request;
 |
 
 */
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function()
+{
+    return View::make('connexion');
 });
 /*
 Création de la vue des parcours ! 
 */
 Route::get('/parcours', 'ParcoursController@show');
 
+
 Route::get('/home', function() {
 	return view('home');
 });
 
+
 Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
-	
+
 
 
 

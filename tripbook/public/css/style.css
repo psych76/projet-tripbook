@@ -69,7 +69,10 @@ a:hover{
     color:#000000;
 
 }
-#madiv{height:100pt;overflow:auto} 
+.scroll{
+   
+    overflow:auto;
+} 
 h1{
     font-family: Verdana;
     font-size: 18px;
