@@ -38,8 +38,8 @@ Route::get('/register', function(){
 });
 
 
-
-
+// 1 : l'url de la page actuelle 2 : méthode du controller appellé
+Route::get('/parcours/creation', 'ParcoursController@createParcours');
 
 Route::get('/livre', function() {
 	return view('livre');

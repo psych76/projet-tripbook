@@ -1,3 +1,11 @@
+@font-face 
+{
+font-family: 'mt';
+src: url('fonts/SCRIPTBL.TTF');
+
+}
+
+
 header
 {
 	background-color: #046380;
@@ -32,6 +40,7 @@ footer
 
 }
 
+
 main
 {
      position: fixed; left: 0; right: 0; top: 25%; bottom:25%;
@@ -46,7 +55,7 @@ ul
 ul#top
 {
     top: 0;
-    
+    color:white;
 }
 
 ul#bottom
@@ -64,6 +73,7 @@ ul {
     left: 0;
     right: 0;
     width: 100%;
+    color:black;
 }
 
 li 
@@ -73,12 +83,12 @@ li
 p, a, a:link{
     font-family: Verdana;
     text-decoration: none;
-    color:#000000;
+    color:black;
 }
 a:hover{
     font-weight: bold;
     text-decoration: none;
-    color:#000000;
+    color:white;
 
 }
 .scroll{
@@ -119,4 +129,30 @@ li a:hover
 .active 
 {
     background-color: #333;
+}
+
+a#creaparcours
+{
+    color : blue;
+}
+
+#fincreation
+{
+    color : blue;
+}
+
+#titre
+{
+    color:#FF9600;
+    text-align: center;
+    font-family:mt;
+    font-size: 26px;
+    font-weight: bold;
+
+}
+
+#description
+{
+    text-align: center;
+    font-size: 12px;
 }

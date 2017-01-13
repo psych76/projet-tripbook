@@ -23,7 +23,7 @@
       </li>
       <li style="float:right"><a href="#contact">A propos</a></li>
       <li style="float:right"><a href="#news">Paramètres</a></li>  
-      <li style="float:right"><a class="active" a href="#news">Profil</a></li>
+      <li style="float:right"><a href="#news">Profil</a></li>
     </ul>
 <main>
   
@@ -36,12 +36,12 @@
 </body>
   
     <footer>
-            <ul id="bottom">
-                <li id="bottom"><a href="{{ url('/parcours') }}"><img src="images/galerie.png" width="90" height="90" alt="galerie" /></a></li>
+            <ul id="bottom"> 
+                <li id="bottom"><a href="{{ url('/parcours') }}"><img src="{{asset('images/galerie.png')}}" width="90" height="90" alt="galerie" /></a></li>
             
-                <li id="bottom"><a href="{{ url('/home') }}"><img src="images/carte.png" width="90" height="90" alt="carte" /></a></li>
+                <li id="bottom"><a href="{{ url('/home') }}"><img src="{{asset('images/carte.png')}}" width="90" height="90" alt="carte" /></a></li>
             
-                <li id="bottom"><a href="{{ url('/livre') }}"><img src="images/livre.png" width="90" height="90" alt="livre" /></a> </li>
+                <li id="bottom"><a href="{{ url('/livre') }}"><img src="{{asset('images/galerie.png')}}" width="90" height="90" alt="livre" /></a> </li>
             </ul>
   </footer>
 </body>

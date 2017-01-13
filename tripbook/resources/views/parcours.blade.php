@@ -22,8 +22,9 @@
              </a></p> </br> <hr>
         @endforeach
         </div>
-
-
+        <div>
+			<a href="{{ URL::action('ParcoursController@createParcours') }}" id="creaparcours">Créer un parcours</a>
+        </div>
 @stop
 
 @section('content')

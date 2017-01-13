@@ -21,4 +21,10 @@ public function showParcours($id)
 	
 	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux]);
 }
+
+//controller de création de parcours
+public function createParcours()
+{
+	return view ('parcourscreation');
+}
 }
