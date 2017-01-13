@@ -6,7 +6,9 @@
     @parent
    
      <figure>
-         <img src="images/carte_nancy.png" alt="carte de nancy" />
+         <img src="images/carte_nancy.png" alt="carte de nancy" style="display: block;
+    margin-left: auto;
+    margin-right: auto" />
      </figure>    
          
   

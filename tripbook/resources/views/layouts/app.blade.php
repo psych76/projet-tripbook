@@ -11,7 +11,7 @@
 </head>
 <body>
 <ul id="top">
-      <li><a href="#home">Home</a> <p> {{ Auth::user()->name }} </p></li>
+      <li><a href="{{ url('/home') }}">Home</a> <p> {{ Auth::user()->name }} </p></li>
 
 
       <li style="float:right">
@@ -25,7 +25,7 @@
       <li style="float:right"><a href="#news">Paramètres</a></li>  
       <li style="float:right"><a class="active" a href="#news">Profil</a></li>
     </ul>
-<main class="scroll">
+<main>
   
  <h1>@yield('titre')</h1>
         @section('content')
