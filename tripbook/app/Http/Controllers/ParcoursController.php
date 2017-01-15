@@ -9,22 +9,29 @@ class ParcoursController extends Controller
 
 {
     public function show()
-{    $parcours = DB::table('parcours')->orderBy('nom_parcours')->get();
-        return view('parcours', ['parcours' => $parcours]);
-}
+	{    $parcours = DB::table('parcours')->orderBy('nom_parcours')->get();
+	        return view('parcours', ['parcours' => $parcours]);
+	}
 
-public function showParcours($id)
-{
-	
-	$parcours_decrit = DB::table('parcours')->where('id_parcours', '=', $id)->get();
-	$lieux = DB::table('contenir')->where('id_parcours', '=', $id)->get();
-	
-	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux]);
-}
+	public function showParcours($id)
+	{
+		
+		$parcours_decrit = DB::table('parcours')->where('id_parcours', '=', $id)->get();
+		$lieux = DB::table('contenir')->where('id_parcours', '=', $id)->get();
+		
+		return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux]);
+	}
 
-//controller de création de parcours
-public function createParcours()
-{
-	return view ('parcourscreation');
-}
+	//controller de création de parcours
+	public function createParcours()
+	{
+		return view ('parcourscreation');
+	}
+
+	//controller de la fin de création d'un parcours
+	public function endParcours()
+	{
+
+	}
+
 }

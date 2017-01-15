@@ -6,7 +6,11 @@
 <meta charset="UTF-8" />
         <meta name="description" content="165c. uniques">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link rel="stylesheet" src="{{ asset('css/popup.css') }}">
         <script src="{{asset('js/jquery.min.js')}}"></script>
+        <script src="{{asset('js/jquery.popup.js')}}"></script>
+      
+
         <title>TripBook</title>
 </head>
 <body>
@@ -44,6 +48,9 @@
                 <li id="bottom"><a href="{{ url('/livre') }}"><img src="{{asset('images/galerie.png')}}" width="90" height="90" alt="livre" /></a> </li>
             </ul>
   </footer>
+
+  
+
 </body>
 </html>
    
