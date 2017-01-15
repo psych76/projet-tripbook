@@ -17,7 +17,9 @@ class CreateAlbumsTable extends Migration
             $table->increments('id_album');
             $table->string('nom_album', 40);
             $table->string('description', 100);
-            $table->string('date_creation');
+            $table->date('date_creation');
+            $table->int('id_compte', 10);
+            $table->int('id_parcours', 10);
         });
     }
 
