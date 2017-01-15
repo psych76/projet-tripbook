@@ -54,9 +54,8 @@
 	    <span class="close">&times;</span>
 	    <p>Gestion de parcours</p>
 	    <form name="general">
-			<input type="text" name="interet" value="nom du point d'intérêt" />
-        	<span class="tooltip" display = "none" >Veuillez indiquer un nom à ce point d'intérêt</span>
-			<div><button type ="button" id="btnajouter"> Ajouter </button></div>
+			<label>Indiquer un nom pour ce point d'intérêt : </label><input type="text" name="interet" value="" />
+        	<div><button type ="button" id="btnajouter"> Ajouter </button></div>
 	    </form>
 	  </div>
 	</div>
@@ -87,9 +86,8 @@
 
 	// Ferme le modal en cliquant sur ajouter
 	btnajouter.onclick = function() 
-	{
-		document.getElementById('contenu').innerHTML += "blabla";
-		/*
+	{		
+		
 		if(document.general.interet.value =="") 
 			{
 				tooltip.display = 'inline-block';
@@ -99,8 +97,9 @@
 			{
 				console.log("contenu non vide");
 				modal.style.display = "none";
+				document.getElementById('contenu').innerHTML = document.general.interet.value;
 			}
-		*/
+		
 	}
 
 	// Fermeture du modal quand l'utilisateur clique en dehors de son emplacement
@@ -159,7 +158,7 @@
 	<div>
 		Liste des points d'intérêts :
 	</div>
-	
+
 	<!-- Liste des points d'intérêts apparaît ici -->
 	<div id="contenu">
 		

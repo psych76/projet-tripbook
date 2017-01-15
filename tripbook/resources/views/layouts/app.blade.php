@@ -45,7 +45,7 @@
             
                 <li id="bottom"><a href="{{ url('/home') }}"><img src="{{asset('images/carte.png')}}" width="90" height="90" alt="carte" /></a></li>
             
-                <li id="bottom"><a href="{{ url('/livre') }}"><img src="{{asset('images/galerie.png')}}" width="90" height="90" alt="livre" /></a> </li>
+                <li id="bottom"><a href="{{ url('/livre') }}"><img src="{{asset('images/livre.png')}}" width="90" height="90" alt="livre" /></a> </li>
             </ul>
   </footer>
 
