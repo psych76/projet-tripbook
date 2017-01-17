@@ -33,6 +33,7 @@ Route::get('/livre', function() {
 
 Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
 
+
 Route::get('/register', function(){
 	return view('home');
 });

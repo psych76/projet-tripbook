@@ -18,11 +18,9 @@ public function showParcours($id)
 
 	$parcours_decrit = DB::table('parcours')->where('id_parcours', '=', $id)->get();
 	$lieux = DB::table('contenir')->where('id_parcours', '=', $id)->join('lieux', 'contenir.id_lieu', '=', 'lieux.id_lieu')->get();
-   /* foreach($lieux as $lieu){
-        $nom_lieux =  DB::table('lieux')->where('id_lieu', '=', $lieu->id_lieu)->get();
-    }*/
+   $commentaires = DB::table('realiser')->where('id_parcours', '=', $id)->join('comptes', 'comptes.id_compte', '=', 'realiser.id_compte')->get();
 
-	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux]);
+	return view('parcours_description', ['parcours_decrit' => $parcours_decrit, 'lieux' => $lieux, 'commentaires_parcours' =>$commentaires]);
 }
 
 //controller de création de parcours
@@ -30,4 +28,6 @@ public function createParcours()
 {
 	return view ('parcourscreation');
 }
+
+
 }

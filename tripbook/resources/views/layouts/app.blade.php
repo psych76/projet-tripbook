@@ -29,7 +29,7 @@
       <li style="float:right"><a href="#news">Paramètres</a></li>  
       <li style="float:right"><a href="#news">Profil</a></li>
     </ul>
-<main>
+<main class="scroll">
   
  <h1>@yield('titre')</h1>
         @section('content')
