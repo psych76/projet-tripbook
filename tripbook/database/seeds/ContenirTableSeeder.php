@@ -89,5 +89,35 @@ class ContenirTableSeeder extends Seeder
                 'id_parcours' => '3',
                 'id_lieu' => '10',               
             ]);
+                DB::table('contenir')->insert(
+            [
+                'id_parcours' => '4',
+                'id_lieu' => '8',               
+            ]);
+                DB::table('contenir')->insert(
+            [
+                'id_parcours' => '4',
+                'id_lieu' => '5',               
+            ]);
+                DB::table('contenir')->insert(
+            [
+                'id_parcours' => '4',
+                'id_lieu' => '2',               
+            ]);
+                DB::table('contenir')->insert(
+            [
+                'id_parcours' => '5',
+                'id_lieu' => '1',               
+            ]);
+                DB::table('contenir')->insert(
+            [
+                'id_parcours' => '5',
+                'id_lieu' => '6',               
+            ]);
+                DB::table('contenir')->insert(
+            [
+                'id_parcours' => '5',
+                'id_lieu' => '4',               
+            ]);
     }
 }

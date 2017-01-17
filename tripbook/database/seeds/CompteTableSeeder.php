@@ -12,7 +12,7 @@ class CompteTableSeeder extends Seeder
     public function run()
     {
     	$now = date('Y-m-d H:i:s');
-        DB::table('users')->insert(
+        DB::table('comptes')->insert(
             [
                 'pseudo' => 'julie54',
                 'password' => 'julie54', 
@@ -24,7 +24,7 @@ class CompteTableSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
-        DB::table('users')->insert(
+        DB::table('comptes')->insert(
             [
                 'pseudo' => 'thibault54',
                 'password' => 'thibault54', 
@@ -36,7 +36,7 @@ class CompteTableSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
-        DB::table('users')->insert(
+        DB::table('comptes')->insert(
             [
                 'pseudo' => 'matthieu54',
                 'password' => 'matthieu54', 
@@ -48,7 +48,7 @@ class CompteTableSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
-        DB::table('users')->insert(
+        DB::table('comptes')->insert(
             [
                 'pseudo' => 'thierry54',
                 'password' => 'thierry54', 
@@ -60,7 +60,7 @@ class CompteTableSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ]);
-        DB::table('users')->insert(
+        DB::table('comptes')->insert(
             [
                 'pseudo' => 'hossam54',
                 'password' => 'hossam54', 
