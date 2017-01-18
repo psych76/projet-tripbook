@@ -26,8 +26,29 @@ public function showParcours($id)
 //controller de création de parcours
 public function createParcours()
 {
+
 	return view ('parcourscreation');
 }
 
+public function endParcours($contenu,$nomparcours)
+{
+	DB::table('lieux') -> insert(
+		['nom_lieu' => $contenu, 'description_lieu' => ""]
+		);
+	DB::table('parcours') -> insert(
+		['nom_parcours' =>  $nomparcours, 'longueur_parcours' => 10,'description_parcours' => ""]
+		);
+
+	 $idparcours = DB::table('parcours')->where('nom_parcours','=',$nomparcours)->select('id_parcours')->get();
+    $idlieux = DB::table('lieux')->where('nom_lieu','=',$contenu)->select('id_lieu')->get();
+
+	DB::table('contenir') -> insert(
+		['id_parcours' => $idparcours[0]->id_parcours, 'id_lieu' => $idlieux[0]->id_lieu]
+		);
+
+	 $parcours = DB::table('parcours')->orderBy('nom_parcours')->get();
+     return view('parcours', ['parcours' => $parcours]);
+
+}
 
 }

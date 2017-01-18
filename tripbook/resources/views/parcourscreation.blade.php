@@ -98,6 +98,7 @@
 				console.log("contenu non vide");
 				modal.style.display = "none";
 				document.getElementById('contenu').innerHTML = document.general.interet.value;
+				
 			}
 		
 	}
@@ -165,7 +166,12 @@
 	</div>
 
 	<div id="titre">
-		<a href="{{ URL::action('ParcoursController@createParcours') }}" id="fincreation"> Terminer création parcours</a>
+		<?php 
+
+			$contenu = "nancy";
+			$nomparcours = "NancyCreation"
+		 ?> 
+		<a href="{{ URL::action('ParcoursController@endParcours', [$contenu ,$nomparcours]) }}" id="fincreation"> Terminer création parcours</a>
 	</div>
 
 
