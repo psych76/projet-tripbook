@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::get('/', function()
 {
-   return view('auth/login');
+    return view('auth/login');
 });
 /*
 Création de la vue des parcours ! 
@@ -23,19 +23,23 @@ Route::get('/parcours', 'ParcoursController@show');
 
 
 Route::get('/home', function() {
-	return view('home');
+    return view('home');
 });
 
 Route::get('/livre', function() {
-	return view('livre');
+    return redirect('/album');
+    //return view('livre');
 });
+
+Route::get('/album', 'AlbumController@show');
+
+Route::get('/album_description/{id}', 'AlbumController@showAlbum');
 
 
 Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
 
-
 Route::get('/register', function(){
-	return view('home');
+    return view('home');
 });
 
 
@@ -43,10 +47,6 @@ Route::get('/register', function(){
 Route::get('/parcours/creation', 'ParcoursController@createParcours');
 
 //Route::get('/parcours/creation', 'ParcoursController@endParcours');
-
-Route::get('/livre', function() {
-	return view('livre');
-});
 
 
 
