@@ -7,8 +7,9 @@
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <title>TripBook</title>
 </head>
-<body>
-    <div >
+<body id="index">
+<img id ="logo" src="{{asset('images/logo.png')}}" alt="logo">
+    <div id="connexion" >
     <h1>Connexion </h1>
     <form  role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
@@ -25,7 +26,6 @@
             </span>
         @endif
         </div>
-    </div>
 
     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
         <label for="password" > Mot de passe </label>
@@ -58,7 +58,7 @@
     </form>               
 </div>
 
- <div class="panel-body">
+ <div id="inscription" class="panel-body">
     <h1>Inscription </h1>
     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
     {{ csrf_field() }}
