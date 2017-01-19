@@ -5,7 +5,7 @@
     <div id=enfant>
 
         <h1 style="text-align:center"> Les albums </h1>
-        <figure>
+        <figure id="figure">
             @foreach($albums as $album)
             <?php $i = 0; ?>
             <span class="album"><a href="http://127.0.0.1/projet-tripbook/tripbook/public/album_description/{{$album->id_album}}">
@@ -27,11 +27,11 @@
 <style>
     .album{
         display:inline-block;
-        width:45%;
-        height:45%;
+        width:680px;
+        height:400px;
         border-style:solid;
         border-width:1px;
-        margin:5px;
+        margin : 15px;
     }
     .titre{
         text-align: center;
@@ -42,6 +42,7 @@
          width: 100%;
          overflow: hidden;
          position: relative;
+         
      }
     #enfant{
         position: absolute;
@@ -51,6 +52,14 @@
         right: -15px; /* Il faut varier cette variable en fonction du navigateur utilisé (la barre de défilement n'a pas toujours la même largeur) */
         overflow: auto;
     }
+
+    #figure
+    {
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
 </style>
 @stop
 @section('content')
