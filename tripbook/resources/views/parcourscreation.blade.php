@@ -54,8 +54,17 @@
 	    <span class="close">&times;</span>
 	    <p>Gestion de parcours</p>
 	    <form name="general">
+			
+			<!--
+			<form action="parcourscreation.blade.php" method="get">
+			<label for="name">Indiquer un nom pour ce point :</label>
+			<input type="submit" value="S'inscrire" />
+			</form>
+			-->
+
 			<label>Indiquer un nom pour ce point d'intérêt : </label><input type="text" name="interet" value="" />
         	<div><button type ="button" id="btnajouter"> Ajouter </button></div>
+
 	    </form>
 	  </div>
 	</div>
@@ -98,7 +107,7 @@
 				console.log("contenu non vide");
 				modal.style.display = "none";
 				document.getElementById('contenu').innerHTML = document.general.interet.value;
-				
+				contenu = document.general.interet.value;
 			}
 		
 	}
@@ -168,8 +177,12 @@
 	<div id="titre">
 		<?php 
 
-			$contenu = "nancy";
-			$nomparcours = "NancyCreation"
+			//$contenu = "<script language='Javascript'> document.write(contenu); </script>";
+
+			//$contenu = $_GET["name"];
+
+			$contenu = "José";
+			$nomparcours = "JoséCreation";
 		 ?> 
 		<a href="{{ URL::action('ParcoursController@endParcours', [$contenu ,$nomparcours]) }}" id="fincreation"> Terminer création parcours</a>
 	</div>
