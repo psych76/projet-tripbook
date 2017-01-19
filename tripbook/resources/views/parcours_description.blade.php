@@ -5,7 +5,7 @@
 
     <!-- Inutile de faire un foreach ici, car la requête de la fonction showParcours($id) va forcément retourner qu'un parcours -->
       @foreach ($parcours_decrit as $parcour)
-       <h1> {{ $parcour -> nom_parcours }} </h1>
+       <h1> {{ $parcour -> nom_parcours }}  <button type="button" class="realiser" id="bouton" onclick="realiser()">Realiser! </button> </h1>
        @endforeach
        <div> 
        <p> {{ $parcour -> longueur_parcours }}  kms -  Parcours officiel</p>
@@ -50,6 +50,12 @@
 
       </div>
     
+  <script type="text/javascript">
+    function realiser(){
+      window.location.replace("http://localhost/projet-tripbook/tripbook/public/home?showMarker=true");
+    }
+  </script>    
+
   <script type="text/javascript">
     function ajout(){
 document.getElementById('com').style.visibility = 'visible';

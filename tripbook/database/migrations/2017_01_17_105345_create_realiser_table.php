@@ -15,7 +15,7 @@ class CreateRealiserTable extends Migration
     {
          Schema::create('realiser', function (Blueprint $table) {
             $table->increments('id_commentaire_parcours');
-            $table->date('date_commentaire_parcours', 40);
+            $table->date('date_commentaire_parcours');
             $table->longtext('commentaire_parcours');
             $table->enum('note_parcours', array('0', '1', '2', '3', '4', '5'));
             $table->integer('id_parcours');

@@ -9,11 +9,37 @@
         <link rel="stylesheet" src="{{ asset('css/popup.css') }}">
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <script src="{{asset('js/jquery.popup.js')}}"></script>
-      
+         <script src="{{asset('js/css-pop.js')}}"></script>
+    
 
         <title>TripBook</title>
 </head>
-<body>
+
+<script type="text/javascript">
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+function showMarker(){
+  var showMarker = getUrlVars()["showMarker"];
+  if(showMarker == 'true'){
+    document.getElementById('Layer2').style.visibility = 'visible';  
+}
+  
+
+}
+</script>   
+
+<body   onload="showMarker()">
 <ul id="top">
       <li><a href="{{ url('/home') }}">Home</a> <p> {{ Auth::user()->name }} </p></li>
 
