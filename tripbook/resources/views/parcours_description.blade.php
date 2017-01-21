@@ -29,7 +29,7 @@
        </div>
 
        <div>
-     <button type="button" id="bouton" onclick="ajout()"> Ajouter un commentaire ! </button>
+     <button type="button" id="bouton_com" onclick="ajout()"> Ajouter un commentaire ! </button>
       <div id="com" style="visibility: hidden;">
       <p> Commentaire : </p>
        <input id="comm" type="text" class="input" required autofocus>
@@ -59,7 +59,8 @@
   <script type="text/javascript">
     function ajout(){
 document.getElementById('com').style.visibility = 'visible';
-document.getElementById('bouton').style.visibility = 'hidden';
+document.getElementById('bouton_com').style.visibility = 'hidden';
+document.getElementById('bouton').style.visibility = 'visible';
     }
   </script>    
 @stop
