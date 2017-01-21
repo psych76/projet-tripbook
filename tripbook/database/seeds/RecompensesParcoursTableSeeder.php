@@ -20,13 +20,23 @@ class RecompensesParcoursTableSeeder extends Seeder
        DB::table('recompensesParcours')->insert(
             [
                 'nom_recompense' => '3€ réduction',
-                'id_parcours' => '1', 
+                'id_parcours' => '3', 
             ]);
 
        DB::table('recompensesParcours')->insert(
             [
                 'nom_recompense' => 'entrée gratuite',
                 'id_parcours' => '2', 
+            ]);
+       DB::table('recompensesParcours')->insert(
+            [
+                'nom_recompense' => 'entrée gratuite',
+                'id_parcours' => '4', 
+            ]);
+       DB::table('recompensesParcours')->insert(
+            [
+                'nom_recompense' => 'entrée gratuite',
+                'id_parcours' => '5', 
             ]);
     }
 }
