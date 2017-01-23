@@ -35,7 +35,6 @@ Route::get('/album', 'AlbumController@show');
 
 Route::get('/album_description/{id}', 'AlbumController@showAlbum');
 
-
 Route::get('/parcours_description/{id}', 'ParcoursController@showParcours');
 
 Route::get('/register', function(){
@@ -46,8 +45,8 @@ Route::get('/register', function(){
 // 1 : l'url de la page actuelle 2 : méthode du controller appellé
 Route::get('/parcours/creation/', 'ParcoursController@createParcours');
 
-Route::get('/parcours/{contenu}/{nomparcours}', 'ParcoursController@endParcours');
-
+//Route::get('/parcours/{contenu}/{nomparcours}', 'ParcoursController@endParcours');
+Route::get('/parcours/fin', 'ParcoursController@endParcours');
 
 
 Auth::routes();
